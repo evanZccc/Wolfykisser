@@ -29,7 +29,7 @@ async function sendMessageWithPermissionsCheck(channel, embed, attachment, actio
     } catch (error) {
         console.error("Error sending message:", error.message);
         const errorEmbed = new EmbedBuilder()
-            .setColor('#ff00cc')
+            .setColor('#FF0000')
             .setDescription("⚠️ **Unable to send message. Check bot permissions.**");
         await channel.send({ embeds: [errorEmbed] });
     }
@@ -99,7 +99,7 @@ function initializePlayer(client) {
                 iconURL: musicIcons.playerIcon,
                 url: config.SupportServer
             })
-            .setFooter({ text: `Developed for Furrytalia`, iconURL: musicIcons.heartIcon })
+            .setFooter({ text: `Developed by SSRR | Prime Music v1.2`, iconURL: musicIcons.heartIcon })
             .setTimestamp()
             .setDescription(  
                 `- **Title:** [${track.info.title}](${track.info.uri})\n` +
@@ -108,7 +108,7 @@ function initializePlayer(client) {
                 `- **Requester:** ${requester}\n` +
                 `- **Source:** ${track.info.sourceName}\n` + '**- Controls :**\n 🔁 `Loop`, ❌ `Disable`, ⏭️ `Skip`, 📜 `Queue`, 🗑️ `Clear`\n ⏹️ `Stop`, ⏸️ `Pause`, ▶️ `Resume`, 🔊 `Vol +`, 🔉 `Vol -`')
             .setImage('attachment://musicard.png')
-            .setColor('#ff00cc');
+            .setColor('#FF7A00');
 
           
             const actionRow1 = createActionRow1(false);
@@ -125,7 +125,7 @@ function initializePlayer(client) {
         } catch (error) {
             console.error("Error creating or sending music card:", error.message);
             const errorEmbed = new EmbedBuilder()
-                .setColor('#ff00cc')
+                .setColor('#FF0000')
                 .setDescription("⚠️ **Unable to load track card. Continuing playback...**");
             await channel.send({ embeds: [errorEmbed] });
         }
@@ -166,7 +166,7 @@ function initializePlayer(client) {
         } catch (error) {
             console.error("Error handling autoplay:", error);
             player.destroy();
-            await channel.send("⚠️ **An error occurred. Disconnecting...**");
+            await channel.send("👾**Queue Empty! Disconnecting...**");
         }
     });
     
