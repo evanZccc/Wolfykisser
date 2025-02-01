@@ -14,7 +14,7 @@ module.exports = {
   embedTimeout: 5, 
   errorLog: "", 
   nodes: [
-     {
+    {
       name: "Koi Node V4",
       password: "prplmoe.me",
       host: "lavav4.prplmoe.me",
@@ -22,10 +22,24 @@ module.exports = {
       secure: false
     },
     {
+      name: "INZEWORLD.COM (DE)",
+      password: "saher.inzeworld.com",
+      host: "lava.inzeworld.com",
+      port: 3128,
+      secure: false
+    },
+    {
       name: "ChalresNaig Node",
       password: "NAIGLAVA-dash.techbyte.host",
       host: "lavahatry4.techbyte.host",
       port: 3000,
+      secure: false
+    },
+    { 
+      name: "AjieDev - Lavalink [Non SSL]",
+      password: "https://dsc.gg/ajidevserver",
+      host: "lava-v3.ajieblogs.eu.org",
+      port: 80,
       secure: false
     }
   ]
